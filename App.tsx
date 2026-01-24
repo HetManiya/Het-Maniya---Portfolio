@@ -345,16 +345,31 @@ const ProjectCard: React.FC<{ project: Project, isDarkMode: boolean }> = ({ proj
         <p className={`text-lg leading-relaxed mb-10 flex-1 transition-colors font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
           {project.description}
         </p>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-col sm:flex-row items-center gap-4">
           <Link 
             to={`/projects/${project.id}`}
-            className="flex-1 bg-white text-slate-950 hover:bg-slate-200 px-8 py-5 rounded-2xl transition-all flex items-center justify-center gap-3 text-sm font-black uppercase tracking-widest active:scale-[0.98]"
+            className={`flex-1 w-full text-center px-8 py-4 rounded-2xl transition-all text-xs font-black uppercase tracking-widest border ${isDarkMode ? 'bg-white/5 border-white/10 text-white hover:bg-white/10' : 'bg-slate-100 border-slate-200 text-slate-950 hover:bg-slate-200'}`}
           >
-            Case Study <ArrowUpRight size={18} />
+            Details
           </Link>
-          <button className={`w-16 h-16 rounded-2xl border flex items-center justify-center transition-all ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-slate-400' : 'border-slate-200 hover:bg-slate-100 text-slate-600'}`}>
+          {project.link && (
+            <a 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex-1 w-full bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-2xl transition-all flex items-center justify-center gap-3 text-xs font-black uppercase tracking-widest active:scale-[0.98]"
+            >
+              Live Demo <ArrowUpRight size={18} />
+            </a>
+          )}
+          <a 
+            href={project.github} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={`w-14 h-14 rounded-2xl border flex items-center justify-center transition-all ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-slate-400' : 'border-slate-200 hover:bg-slate-100 text-slate-600'}`}
+          >
             <Github size={24} />
-          </button>
+          </a>
         </div>
       </div>
     </div>
