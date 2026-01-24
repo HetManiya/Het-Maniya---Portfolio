@@ -52,14 +52,14 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/hetmaniya/residency-portal"
   },
   {
-    id: "weather-sphere",
-    title: "WeatherSphere Pro",
-    description: "Real-time weather analytics application with 7-day forecasting and dynamic visualization.",
-    fullDescription: "WeatherSphere Pro provides highly accurate, real-time weather data by integrating with enterprise-grade meteorological APIs. The application features dynamic background themes that change based on current local conditions, detailed hourly breakdowns, and a 7-day extended forecast. Built with a mobile-first approach, it offers a seamless experience across all devices with smooth transitions and interactive charts for temperature trends.",
-    tags: ["JavaScript", "API Integration", "Data Visualization"],
-    technologies: ["JavaScript (ES6)", "OpenWeatherMap API", "Chart.js", "CSS Grid & Flexbox", "Geolocation API"],
-    imageUrl: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&q=80&w=1200",
-    link: "#",
-    github: "https://github.com/hetmaniya/weather-sphere"
+    id: "anpr-system",
+    title: "Automatic Number Plate Detection System",
+    description: "An advanced computer vision application for automated identification and logging of vehicle license plates.",
+    fullDescription: "The Automatic Number Plate Detection (ANPR) system leverages cutting-edge computer vision algorithms to detect, track, and recognize license plates from live video streams or static images. Utilizing specialized OCR engines and image processing techniques, it can identify characters in varying lighting conditions and angles. This system is designed for high-traffic environments, offering real-time processing and integration capabilities with security databases for automated entry management.",
+    tags: ["Computer Vision", "OCR", "Security"],
+    technologies: ["Python", "OpenCV", "Tesseract OCR", "React JS", "Node.js", "TensorFlow"],
+    imageUrl: "https://images.unsplash.com/photo-1594070319944-7c0cbebb6f58?auto=format&fit=crop&q=80&w=1200",
+    link: "https://ai.studio/apps/drive/1DzPAxPKEhMaEh5ZTYf237avN9D3YoH4m?fullscreenApplet=true",
+    github: "https://github.com/hetmaniya/anpr-detection"
   }
 ];

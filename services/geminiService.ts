@@ -2,7 +2,8 @@
 import { GoogleGenAI } from "@google/genai";
 import { PERSONAL_INFO, SKILLS, EDUCATION, EXPERIENCE } from "../constants";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+// Correct SDK initialization as per guidelines
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const SYSTEM_INSTRUCTION = `
 You are an AI assistant for Het Maniya's portfolio website. 
@@ -18,8 +19,6 @@ Be professional, friendly, and concise. If you don't know the answer, politely s
 `;
 
 export async function askAssistant(prompt: string): Promise<string> {
-  if (!process.env.API_KEY) return "Assistant is currently unavailable (API Key missing).";
-
   try {
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
@@ -30,6 +29,7 @@ export async function askAssistant(prompt: string): Promise<string> {
       },
     });
 
+    // Directly access .text property as per guidelines
     return response.text || "I'm sorry, I couldn't process that.";
   } catch (error) {
     console.error("Gemini Error:", error);
