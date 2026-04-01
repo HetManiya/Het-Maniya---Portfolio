@@ -2,9 +2,6 @@
 import { GoogleGenAI } from "@google/genai";
 import { PERSONAL_INFO, SKILLS, EDUCATION, EXPERIENCE } from "../constants";
 
-// Correct SDK initialization as per guidelines
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 const SYSTEM_INSTRUCTION = `
 You are an AI assistant for Het Maniya's portfolio website. 
 Your goal is to answer questions about Het Maniya based on his resume:
@@ -20,6 +17,10 @@ Be professional, friendly, and concise. If you don't know the answer, politely s
 
 export async function askAssistant(prompt: string): Promise<string> {
   try {
+    // Fix: Create a new GoogleGenAI instance right before making an API call to ensure it always uses the most up-to-date API key.
+    // The key must be obtained exclusively from process.env.API_KEY as per the library guidelines.
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: prompt,
@@ -29,7 +30,7 @@ export async function askAssistant(prompt: string): Promise<string> {
       },
     });
 
-    // Directly access .text property as per guidelines
+    // Fix: Access the .text property directly as it is not a method in the GenerateContentResponse object.
     return response.text || "I'm sorry, I couldn't process that.";
   } catch (error) {
     console.error("Gemini Error:", error);
