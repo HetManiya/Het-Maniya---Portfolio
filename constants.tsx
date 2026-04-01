@@ -47,7 +47,7 @@ export const PROJECTS: Project[] = [
     fullDescription: "The Saurashtra Residency Portal is a robust full-stack solution designed to streamline residential management. It features a digital notice board for instant community updates, a maintenance tracking system where residents can report issues and monitor resolution progress, and a resource management module for shared facilities. The application prioritizes high performance and accessibility, ensuring that all residents, regardless of tech-savviness, can participate in their community's digital life.",
     tags: ["React", "Tailwind CSS", "Community Portal"],
     technologies: ["React JS", "Context API", "Tailwind CSS", "Lucide Icons", "RESTful APIs", "Firebase"],
-    imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200",
+    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
     link: "https://ai.studio/apps/drive/10S_BdnRJmuoP_VaAtVJ1DEGwyn9kmCHA?fullscreenApplet=true",
     github: "https://github.com/hetmaniya/residency-portal"
   },
@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
     fullDescription: "The Automatic Number Plate Detection (ANPR) system leverages cutting-edge computer vision algorithms to detect, track, and recognize license plates from live video streams or static images. Utilizing specialized OCR engines and image processing techniques, it can identify characters in varying lighting conditions and angles. This system is designed for high-traffic environments, offering real-time processing and integration capabilities with security databases for automated entry management.",
     tags: ["Computer Vision", "OCR", "Security"],
     technologies: ["Python", "OpenCV", "Tesseract OCR", "React JS", "Node.js", "TensorFlow"],
-    imageUrl: "https://images.unsplash.com/photo-1594070319944-7c0cbebb6f58?auto=format&fit=crop&q=80&w=1200",
+    imageUrl: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1200",
     link: "https://ai.studio/apps/drive/1DzPAxPKEhMaEh5ZTYf237avN9D3YoH4m?fullscreenApplet=true",
     github: "https://github.com/hetmaniya/anpr-detection"
   }

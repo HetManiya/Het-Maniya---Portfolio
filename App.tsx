@@ -66,7 +66,7 @@ const Home = ({ isDarkMode }: { isDarkMode: boolean }) => (
           Available for new opportunities
         </div>
         
-        <h1 className={`text-7xl md:text-9xl font-black tracking-tighter leading-[0.8] transition-colors ${isDarkMode ? 'text-white' : 'text-slate-950'}`}>
+        <h1 className={`text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter leading-[0.8] transition-colors ${isDarkMode ? 'text-white' : 'text-slate-950'}`}>
           CREATIVE <br /> <span className="gradient-text">DEVELOPER</span>
         </h1>
         
@@ -75,18 +75,18 @@ const Home = ({ isDarkMode }: { isDarkMode: boolean }) => (
         </p>
 
         <div className="flex flex-wrap gap-5 pt-6">
-          <Link to="/projects" className="group bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all flex items-center gap-3 shadow-2xl shadow-indigo-600/30 active:scale-95 glow-on-hover">
+          <Link to="/projects" className="group bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all flex items-center justify-center w-full sm:w-auto gap-3 shadow-2xl shadow-indigo-600/30 active:scale-95 glow-on-hover">
             Explore Portfolio <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </Link>
           <Link 
             to="/resume" 
-            className={`flex items-center gap-3 px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all border ${isDarkMode ? 'bg-white/5 border-white/10 text-white hover:bg-white/10' : 'bg-white border-slate-200 text-slate-900 hover:bg-slate-50 shadow-sm'}`}
+            className={`flex items-center justify-center gap-3 px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all border w-full sm:w-auto ${isDarkMode ? 'bg-white/5 border-white/10 text-white hover:bg-white/10' : 'bg-white border-slate-200 text-slate-900 hover:bg-slate-50 shadow-sm'}`}
           >
             Digital CV <FileText size={20} />
           </Link>
         </div>
 
-        <div className="flex items-center gap-12 pt-12">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-12 pt-12">
           <div>
             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-2">Core Tech</p>
             <div className="flex gap-4">
@@ -107,8 +107,8 @@ const Home = ({ isDarkMode }: { isDarkMode: boolean }) => (
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 blur-[120px] rounded-full"></div>
         <div className="relative glass p-4 rounded-[4rem] rotate-3 hover:rotate-0 transition-all duration-700 shadow-2xl">
           <img 
-            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200" 
-            alt="Workspace" 
+            src="https://avatars.githubusercontent.com/u/144675685?v=4" 
+            alt="Het Maniya" 
             className="rounded-[3rem] w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-1000"
           />
           <div className="absolute -bottom-8 -right-8 glass p-8 rounded-3xl animate-bounce shadow-xl">
@@ -136,9 +136,9 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => (
       subtitle="A narrative of my growth, technical interests, and the philosophy behind my work." 
       isDarkMode={isDarkMode} 
     />
-    <div className="grid lg:grid-cols-2 gap-24 items-start">
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
       <div className="space-y-12">
-        <div className={`glass p-12 rounded-[3rem] ${isDarkMode ? 'bg-slate-900/50' : 'bg-white shadow-xl'}`}>
+        <div className={`glass p-8 sm:p-12 rounded-[2rem] sm:rounded-[3rem] ${isDarkMode ? 'bg-slate-900/50' : 'bg-white shadow-xl'}`}>
           <h3 className="text-3xl font-black mb-8 leading-tight">Driven by Curiosity, <br /> Guided by Design.</h3>
           <div className={`space-y-6 text-lg leading-relaxed ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>
             <p>{PERSONAL_INFO.about}</p>
@@ -146,7 +146,7 @@ const About = ({ isDarkMode }: { isDarkMode: boolean }) => (
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {[
             { label: "Year of Study", value: "3rd Year", sub: "B.E Degree" },
             { label: "Projects", value: "10+", sub: "Completed" },
@@ -195,11 +195,11 @@ const Skills = ({ isDarkMode }: { isDarkMode: boolean }) => (
       subtitle="My technical stack is carefully selected to provide the best balance between speed, stability, and scale." 
       isDarkMode={isDarkMode} 
     />
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
       {SKILLS.map((skill, idx) => (
         <div 
           key={idx} 
-          className={`glass p-10 rounded-[3rem] group transition-all relative overflow-hidden ${isDarkMode ? 'hover:bg-slate-800/80' : 'hover:bg-white shadow-xl'}`}
+          className={`glass p-8 sm:p-10 rounded-[2rem] sm:rounded-[3rem] group transition-all relative overflow-hidden ${isDarkMode ? 'hover:bg-slate-800/80' : 'hover:bg-white shadow-xl'}`}
         >
           <div className="absolute -right-8 -top-8 w-32 h-32 bg-indigo-500/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
           <div className={`mb-8 inline-flex items-center justify-center w-20 h-20 rounded-3xl text-indigo-400 transition-all shadow-inner border border-white/5 ${isDarkMode ? 'bg-slate-900' : 'bg-slate-50'}`}>
@@ -228,18 +228,18 @@ const Experience = ({ isDarkMode }: { isDarkMode: boolean }) => (
       subtitle="The path I've taken through formal education and professional internships." 
       isDarkMode={isDarkMode} 
     />
-    <div className="grid lg:grid-cols-2 gap-24">
+    <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
       <div className="space-y-16">
         <h3 className="text-xl font-black uppercase tracking-[0.4em] text-slate-500 flex items-center gap-6">
-          Professional <div className="h-px flex-1 bg-slate-800"></div>
+          Professional <span className="h-px flex-1 bg-slate-800"></span>
         </h3>
         <div className="space-y-12">
           {EXPERIENCE.map((exp, idx) => (
-            <div key={idx} className="group relative pl-12">
+            <div key={idx} className="group relative pl-8 sm:pl-12">
               <div className="absolute left-0 top-0 bottom-0 w-px bg-slate-800"></div>
               <div className="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.8)] group-hover:scale-150 transition-transform"></div>
               
-              <div className={`glass p-12 rounded-[3rem] transition-all hover:-translate-y-2 ${isDarkMode ? 'hover:bg-slate-800/50' : 'hover:bg-white shadow-xl'}`}>
+              <div className={`glass p-8 sm:p-12 rounded-[2rem] sm:rounded-[3rem] transition-all hover:-translate-y-2 ${isDarkMode ? 'hover:bg-slate-800/50' : 'hover:bg-white shadow-xl'}`}>
                 <div className="flex flex-wrap justify-between items-start gap-4 mb-6">
                   <div>
                     <h4 className="text-3xl font-black mb-1">{exp.role}</h4>
@@ -256,15 +256,15 @@ const Experience = ({ isDarkMode }: { isDarkMode: boolean }) => (
 
       <div className="space-y-16">
         <h3 className="text-xl font-black uppercase tracking-[0.4em] text-slate-500 flex items-center gap-6">
-          Education <div className="h-px flex-1 bg-slate-800"></div>
+          Education <span className="h-px flex-1 bg-slate-800"></span>
         </h3>
         <div className="space-y-12">
           {EDUCATION.map((edu, idx) => (
-            <div key={idx} className="group relative pl-12">
+            <div key={idx} className="group relative pl-8 sm:pl-12">
               <div className="absolute left-0 top-0 bottom-0 w-px bg-slate-800"></div>
               <div className="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)] group-hover:scale-150 transition-transform"></div>
               
-              <div className={`glass p-12 rounded-[3rem] transition-all hover:-translate-y-2 ${isDarkMode ? 'hover:bg-slate-800/50' : 'hover:bg-white shadow-xl'}`}>
+              <div className={`glass p-8 sm:p-12 rounded-[2rem] sm:rounded-[3rem] transition-all hover:-translate-y-2 ${isDarkMode ? 'hover:bg-slate-800/50' : 'hover:bg-white shadow-xl'}`}>
                 <div className="flex flex-wrap justify-between items-start gap-4 mb-6">
                   <div>
                     <h4 className="text-3xl font-black mb-1">{edu.degree}</h4>
@@ -333,7 +333,7 @@ const ProjectCard: React.FC<{ project: Project, isDarkMode: boolean }> = ({ proj
         </div>
       </div>
       
-      <div className="p-12 flex-1 flex flex-col">
+      <div className="p-8 sm:p-12 flex-1 flex flex-col">
         <div className="flex gap-3 mb-8 flex-wrap">
           {project.tags.map(tag => (
             <span key={tag} className="text-[9px] font-black uppercase tracking-[0.2em] px-4 py-2 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/10">
@@ -345,31 +345,33 @@ const ProjectCard: React.FC<{ project: Project, isDarkMode: boolean }> = ({ proj
         <p className={`text-lg leading-relaxed mb-10 flex-1 transition-colors font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
           {project.description}
         </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
           <Link 
             to={`/projects/${project.id}`}
-            className={`flex-1 w-full text-center px-8 py-4 rounded-2xl transition-all text-xs font-black uppercase tracking-widest border ${isDarkMode ? 'bg-white/5 border-white/10 text-white hover:bg-white/10' : 'bg-slate-100 border-slate-200 text-slate-950 hover:bg-slate-200'}`}
+            className={`flex-1 text-center px-8 py-4 rounded-2xl transition-all text-xs font-black uppercase tracking-widest border ${isDarkMode ? 'bg-white/5 border-white/10 text-white hover:bg-white/10' : 'bg-slate-100 border-slate-200 text-slate-950 hover:bg-slate-200'}`}
           >
             Details
           </Link>
-          {project.link && (
+          <div className="flex gap-4">
+            {project.link && (
+              <a 
+                href={project.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-2xl transition-all flex items-center justify-center gap-3 text-xs font-black uppercase tracking-widest active:scale-[0.98]"
+              >
+                Live Demo <ArrowUpRight size={18} />
+              </a>
+            )}
             <a 
-              href={project.link} 
+              href={project.github} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex-1 w-full bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-2xl transition-all flex items-center justify-center gap-3 text-xs font-black uppercase tracking-widest active:scale-[0.98]"
+              className={`w-14 h-14 shrink-0 rounded-2xl border flex items-center justify-center transition-all ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-slate-400' : 'border-slate-200 hover:bg-slate-100 text-slate-600'}`}
             >
-              Live Demo <ArrowUpRight size={18} />
+              <Github size={24} />
             </a>
-          )}
-          <a 
-            href={project.github} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className={`w-14 h-14 rounded-2xl border flex items-center justify-center transition-all ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-slate-400' : 'border-slate-200 hover:bg-slate-100 text-slate-600'}`}
-          >
-            <Github size={24} />
-          </a>
+          </div>
         </div>
       </div>
     </div>
@@ -384,7 +386,7 @@ const Projects = ({ isDarkMode }: { isDarkMode: boolean }) => (
       subtitle="A collection of specialized solutions, from residential management portals to automated visual recognition systems." 
       isDarkMode={isDarkMode} 
     />
-    <div className="grid lg:grid-cols-2 gap-16">
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
       {PROJECTS.map((project) => (
         <ProjectCard key={project.id} project={project} isDarkMode={isDarkMode} />
       ))}
@@ -415,7 +417,7 @@ const ProjectDetails = ({ isDarkMode }: { isDarkMode: boolean }) => {
       <div className="relative h-[70vh] w-full overflow-hidden">
         <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full p-8 md:p-24">
+        <div className="absolute bottom-0 left-0 w-full p-6 sm:p-8 md:p-24">
           <div className="max-w-7xl mx-auto">
             <button onClick={() => navigate('/projects')} className="text-white/60 hover:text-white flex items-center gap-3 mb-8 font-black uppercase tracking-[0.2em] text-xs transition-colors group">
               <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> Return to Portfolio
@@ -427,29 +429,29 @@ const ProjectDetails = ({ isDarkMode }: { isDarkMode: boolean }) => {
                 </span>
               ))}
             </div>
-            <h1 className="text-5xl md:text-8xl font-black text-white mb-6 tracking-tighter leading-none">{project.title}</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-8xl font-black text-white mb-6 tracking-tighter leading-none">{project.title}</h1>
           </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-32">
-        <div className="grid lg:grid-cols-3 gap-24 items-start">
+        <div className="grid lg:grid-cols-3 gap-12 lg:gap-24 items-start">
           <div className="lg:col-span-2 space-y-20">
             <div>
               <h3 className="text-xs font-black text-slate-500 uppercase tracking-[0.4em] mb-10 flex items-center gap-6">
-                 Project Context <div className="h-px flex-1 bg-slate-800"></div>
+                 Project Context <span className="h-px flex-1 bg-slate-800"></span>
               </h3>
               <p className={`text-2xl leading-relaxed font-medium ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                 {project.fullDescription}
               </p>
             </div>
 
-            <div className={`p-16 rounded-[4rem] border ${isDarkMode ? 'bg-slate-900/50 border-white/5' : 'bg-slate-50 border-slate-200'}`}>
+            <div className={`p-8 sm:p-16 rounded-[2rem] sm:rounded-[4rem] border ${isDarkMode ? 'bg-slate-900/50 border-white/5' : 'bg-slate-50 border-slate-200'}`}>
               <h3 className="text-xl font-black mb-12 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400"><Terminal size={20} /></div>
+                <span className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400"><Terminal size={20} /></span>
                 Built With
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {project.technologies.map(tech => (
                   <div key={tech} className={`flex items-center gap-4 p-6 rounded-3xl glass ${isDarkMode ? 'bg-white/5 hover:bg-white/10' : 'bg-white hover:bg-slate-100 shadow-sm'}`}>
                     <div className="w-2.5 h-2.5 rounded-full bg-indigo-500"></div>
@@ -522,21 +524,21 @@ const Contact = ({ isDarkMode }: { isDarkMode: boolean }) => {
         subtitle="I'm always interested in hearing about new projects or potential collaborations." 
         isDarkMode={isDarkMode} 
       />
-      <div className="grid lg:grid-cols-5 gap-24 items-start">
+      <div className="grid lg:grid-cols-5 gap-12 lg:gap-24 items-start">
         <div className="lg:col-span-2 space-y-12">
-          <div className={`glass p-16 rounded-[4rem] space-y-12 ${isDarkMode ? 'bg-slate-900/50' : 'bg-white shadow-xl'}`}>
+          <div className={`glass p-8 sm:p-16 rounded-[2rem] sm:rounded-[4rem] space-y-8 sm:space-y-12 ${isDarkMode ? 'bg-slate-900/50' : 'bg-white shadow-xl'}`}>
             {[
               { icon: <Mail size={28}/>, title: "Electronic Mail", value: PERSONAL_INFO.email, color: 'text-indigo-400' },
               { icon: <Phone size={28}/>, title: "Mobile Phone", value: PERSONAL_INFO.phone, color: 'text-purple-400' },
               { icon: <MapPin size={28}/>, title: "HQ Location", value: "Surat, India", color: 'text-blue-400' }
             ].map((item, idx) => (
-              <div key={idx} className="flex items-start gap-8">
-                <div className={`w-16 h-16 rounded-3xl flex items-center justify-center shrink-0 border border-white/5 shadow-inner ${isDarkMode ? 'bg-slate-950' : 'bg-slate-50 shadow-sm'} ${item.color}`}>
+              <div key={idx} className="flex items-start gap-6 sm:gap-8">
+                <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-3xl flex items-center justify-center shrink-0 border border-white/5 shadow-inner ${isDarkMode ? 'bg-slate-950' : 'bg-slate-50 shadow-sm'} ${item.color}`}>
                   {item.icon}
                 </div>
                 <div>
-                  <h4 className="font-black text-xl mb-1">{item.title}</h4>
-                  <p className={`text-lg transition-colors ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>{item.value}</p>
+                  <h4 className="font-black text-lg sm:text-xl mb-1">{item.title}</h4>
+                  <p className={`text-base sm:text-lg transition-colors ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>{item.value}</p>
                 </div>
               </div>
             ))}
@@ -544,7 +546,7 @@ const Contact = ({ isDarkMode }: { isDarkMode: boolean }) => {
         </div>
 
         <div className="lg:col-span-3">
-          <div className={`glass p-16 rounded-[4rem] relative overflow-hidden ${isDarkMode ? 'bg-slate-900/50' : 'bg-white shadow-xl'}`}>
+          <div className={`glass p-8 sm:p-16 rounded-[2rem] sm:rounded-[4rem] relative overflow-hidden ${isDarkMode ? 'bg-slate-900/50' : 'bg-white shadow-xl'}`}>
             {isSubmitted ? (
               <div className="py-24 flex flex-col items-center text-center space-y-6 animate-in fade-in zoom-in duration-500">
                 <div className="w-24 h-24 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 mb-4">
@@ -555,7 +557,7 @@ const Contact = ({ isDarkMode }: { isDarkMode: boolean }) => {
                 <button onClick={() => setIsSubmitted(false)} className="mt-8 text-indigo-400 font-black uppercase tracking-widest hover:underline text-sm">Send Another Inqury</button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="grid sm:grid-cols-2 gap-10">
+              <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10">
                 <div className="space-y-4">
                   <label className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 ml-2">Name</label>
                   <input 
@@ -594,31 +596,31 @@ const Contact = ({ isDarkMode }: { isDarkMode: boolean }) => {
 // --- ENHANCED RESUME PAGE ---
 const Resume = ({ isDarkMode }: { isDarkMode: boolean }) => (
   <section className="py-24 px-6 max-w-6xl mx-auto animate-in fade-in duration-1000">
-    <div className="flex flex-col sm:flex-row justify-between items-center mb-16 no-print gap-10">
+    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-16 no-print gap-6 sm:gap-10">
       <div>
-        <h3 className="text-5xl font-black mb-4 tracking-tighter">Curriculum <span className="gradient-text">Vitae</span></h3>
-        <p className="text-xs text-slate-500 uppercase tracking-[0.4em] font-black flex items-center gap-3">
-          <div className="w-2 h-2 rounded-full bg-green-500"></div> Latest Version • Oct 2025
-        </p>
+        <h3 className="text-4xl sm:text-5xl font-black mb-4 tracking-tighter">Curriculum <span className="gradient-text">Vitae</span></h3>
+        <div className="text-xs text-slate-500 uppercase tracking-[0.4em] font-black flex items-center gap-3">
+          <span className="w-2 h-2 rounded-full bg-green-500"></span> Latest Version • Oct 2025
+        </div>
       </div>
       <button 
         onClick={() => window.print()} 
-        className="flex items-center gap-4 bg-white text-slate-950 hover:bg-slate-200 px-10 py-5 rounded-2xl font-black uppercase tracking-widest transition-all shadow-2xl shadow-white/10 active:scale-95 glow-on-hover"
+        className="w-full sm:w-auto flex items-center justify-center gap-4 bg-white text-slate-950 hover:bg-slate-200 px-10 py-5 rounded-2xl font-black uppercase tracking-widest transition-all shadow-2xl shadow-white/10 active:scale-95 glow-on-hover"
       >
         <Printer size={20} /> Print Document
       </button>
     </div>
 
-    <div className={`p-20 sm:p-24 rounded-[4rem] shadow-2xl border transition-all relative overflow-hidden resume-container ${isDarkMode ? 'bg-[#0f172a] border-white/5' : 'bg-white border-slate-100 text-slate-900'}`}>
+    <div className={`p-8 sm:p-20 md:p-24 rounded-[2rem] sm:rounded-[4rem] shadow-2xl border transition-all relative overflow-hidden resume-container ${isDarkMode ? 'bg-[#0f172a] border-white/5' : 'bg-white border-slate-100 text-slate-900'}`}>
       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600"></div>
       
-      <div className="flex flex-col md:flex-row justify-between items-end gap-12 pb-20 border-b-2 border-slate-800/50 mb-20">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 pb-20 border-b-2 border-slate-800/50 mb-20">
         <div>
-          <h2 className="text-8xl font-black tracking-tighter mb-4 leading-none uppercase">{PERSONAL_INFO.name.split(' ')[0]}<br />{PERSONAL_INFO.name.split(' ')[1]}</h2>
+          <h2 className="text-5xl sm:text-8xl font-black tracking-tighter mb-4 leading-none uppercase">{PERSONAL_INFO.name.split(' ')[0]}<br />{PERSONAL_INFO.name.split(' ')[1]}</h2>
           <div className="flex items-center gap-6">
-            <p className="text-indigo-500 font-black uppercase tracking-[0.3em] text-xl">{PERSONAL_INFO.role}</p>
+            <p className="text-indigo-500 font-black uppercase tracking-[0.3em] text-lg sm:text-xl">{PERSONAL_INFO.role}</p>
             <div className="h-2 w-2 rounded-full bg-slate-700"></div>
-            <p className="text-slate-500 font-bold uppercase tracking-widest text-sm">GEC Modasa</p>
+            <p className="text-slate-500 font-bold uppercase tracking-widest text-xs sm:text-sm">GEC Modasa</p>
           </div>
         </div>
         <div className="text-sm space-y-3 text-left md:text-right font-bold uppercase tracking-widest text-slate-500">
@@ -628,23 +630,23 @@ const Resume = ({ isDarkMode }: { isDarkMode: boolean }) => (
         </div>
       </div>
 
-      <div className="grid md:grid-cols-12 gap-24">
-        <div className="md:col-span-8 space-y-20">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24">
+        <div className="md:col-span-8 space-y-12 md:space-y-20">
           <div>
             <h4 className="text-[10px] font-black text-indigo-500 uppercase tracking-[0.5em] mb-10">01. Profile Summary</h4>
-            <p className="text-2xl leading-relaxed font-bold tracking-tight italic">"{PERSONAL_INFO.about}"</p>
+            <p className="text-xl sm:text-2xl leading-relaxed font-bold tracking-tight italic">"{PERSONAL_INFO.about}"</p>
           </div>
 
           <div>
             <h4 className="text-[10px] font-black text-indigo-500 uppercase tracking-[0.5em] mb-10">02. Career Timeline</h4>
             {EXPERIENCE.map((exp, idx) => (
               <div key={idx} className="mb-12 group last:mb-0">
-                <div className="flex justify-between items-baseline mb-4">
-                  <h5 className="font-black text-4xl group-hover:text-indigo-400 transition-colors tracking-tight">{exp.role}</h5>
-                  <span className="text-xs font-black text-slate-500 uppercase tracking-widest bg-slate-800/50 px-4 py-2 rounded-xl">{exp.period}</span>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-4">
+                  <h5 className="font-black text-3xl sm:text-4xl group-hover:text-indigo-400 transition-colors tracking-tight">{exp.role}</h5>
+                  <span className="text-xs font-black text-slate-500 uppercase tracking-widest bg-slate-800/50 px-4 py-2 rounded-xl self-start sm:self-auto">{exp.period}</span>
                 </div>
                 <p className="text-indigo-500 text-lg font-black mb-6 uppercase tracking-[0.2em]">{exp.company}</p>
-                <p className="text-xl leading-relaxed text-slate-500 font-medium">{exp.description}</p>
+                <p className="text-lg sm:text-xl leading-relaxed text-slate-500 font-medium">{exp.description}</p>
               </div>
             ))}
           </div>
@@ -653,18 +655,18 @@ const Resume = ({ isDarkMode }: { isDarkMode: boolean }) => (
             <h4 className="text-[10px] font-black text-indigo-500 uppercase tracking-[0.5em] mb-10">03. Project Index</h4>
             <div className="grid gap-12">
               {PROJECTS.map((proj, idx) => (
-                <div key={idx} className="relative pl-10 border-l border-slate-800">
+                <div key={idx} className="relative pl-8 sm:pl-10 border-l border-slate-800">
                   <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-slate-800"></div>
                   <h5 className="font-black text-2xl mb-2">{proj.title}</h5>
                   <p className="text-[10px] text-indigo-400 font-black mb-4 uppercase tracking-[0.3em]">{proj.tags.join(' // ')}</p>
-                  <p className="text-lg leading-relaxed text-slate-500 font-medium">{proj.description}</p>
+                  <p className="text-base sm:text-lg leading-relaxed text-slate-500 font-medium">{proj.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="md:col-span-4 space-y-20">
+        <div className="md:col-span-4 space-y-12 md:space-y-20">
           <div>
             <h4 className="text-[10px] font-black text-indigo-500 uppercase tracking-[0.5em] mb-10">04. Education</h4>
             {EDUCATION.map((edu, idx) => (

@@ -44,7 +44,7 @@ const Assistant: React.FC = () => {
           <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 border-2 border-slate-900 rounded-full"></span>
         </button>
       ) : (
-        <div className="bg-slate-800 border border-slate-700 w-80 sm:w-96 rounded-2xl shadow-2xl flex flex-col max-h-[500px] overflow-hidden animate-in slide-in-from-bottom-4 duration-300">
+        <div className="bg-slate-800 border border-slate-700 w-[calc(100vw-3rem)] sm:w-96 max-w-96 rounded-2xl shadow-2xl flex flex-col max-h-[500px] overflow-hidden animate-in slide-in-from-bottom-4 duration-300">
           <div className="p-4 border-b border-slate-700 flex justify-between items-center bg-slate-900/50">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center">
